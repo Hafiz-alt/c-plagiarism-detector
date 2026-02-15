@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+// This function prints the numbers
+void do_math(int limit) {
+    int x = 0;
+    int y = 1;
+    int temp;
+    int count = 1;
+    
+    printf("Series: ");
+    
+    while (count <= limit) {
+        printf("%d ", x);
+        temp = x + y;
+        x = y;
+        y = temp;
+        count++;
+    }
+}
+
+int main() {
+    int value = 10;
+    do_math(value);
+    return 0;
+}

@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void calculate_series(int n) {
+    int a = 0, b = 1, next_term, i;
+    printf("Series: ");
+    
+    for (i = 1; i <= n; i++) {
+        printf("%d ", a);
+        next_term = a + b;
+        a = b;
+        b = next_term;
+    }
+}
+
+int main() {
+    int num = 10;
+    calculate_series(num);
+    return 0;
+}
